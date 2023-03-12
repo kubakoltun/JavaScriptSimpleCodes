@@ -50,8 +50,6 @@ exports.main = (event) => {
                 .then(result => {
                   let cdate0 = result.properties.createdate;
                   let amount = result.properties.amount;
-
-
                   cdateConversion = new Date(cdate0);
                   let yesterday = new Date(new Date().setDate(new Date().getDate()-1));
 
@@ -124,12 +122,12 @@ exports.main = (event) => {
         let data0 = new Date(cdatePropVal0);
         let data1 = new Date(cdatePropVal1);   
         
-		if (data0 < data1){
+	if (data0 < data1){
             let temp = 0;
 			temp = idToMerge;
 			idToMerge = idMerged1;
 			idMerged1 = temp;
-         }
+        }
        
         let id0 = "";
         let id1 = "";
@@ -145,8 +143,8 @@ exports.main = (event) => {
           }
         });
 
-           });
-         });
-        });
-	});
+       });
+     });
+   });
+ });
 }
